@@ -1,0 +1,284 @@
+/* Magic: The Gathering Card Styling - Print Ready */
+#dynamic-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 2270px; /* 5 cards × 454px each */
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    width: 454px;  /* Standard Magic card width ratio - doubled */
+    height: 634px; /* Standard Magic card height ratio - doubled */
+    background: linear-gradient(135deg, #f4f1e8 0%, #e8e1d3 100%);
+    border: 6px solid #2c1810;  /* doubled */
+    border-radius: 0px;  /* Non-rounded as requested */
+    margin: 0;  /* No margins for print cutting */
+    /* Removed all shadows for printing */
+    position: relative;
+    font-family: 'Times New Roman', serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Prevent cards from shrinking */
+}
+
+/* Card Header - Fixed Height */
+.card-header {
+    background: linear-gradient(90deg, #2c1810 0%, #4a3526 50%, #2c1810 100%);
+    padding: 2px 16px;  /* doubled from 1px 8px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #1a0f08;  /* doubled */
+    height: 50px; /* Fixed height for consistency */
+    min-height: 50px;
+    max-height: 50px;
+}
+
+.card-name {
+    color: #f4f1e8;
+    font-size: 26px;  /* doubled */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);  /* doubled */
+    margin: 0;
+    max-width: 280px;  /* doubled */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mana {
+    display: flex;
+    gap: 4px;  /* doubled */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mana li {
+    background: #f4f1e8;
+    border: 4px solid #2c1810;  /* doubled */
+    border-radius: 50%;
+    width: 36px;  /* doubled */
+    height: 36px;  /* doubled */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;  /* doubled */
+    font-weight: bold;
+    color: #2c1810;
+    /* Removed shadow for printing */
+}
+
+/* Card Art Area - Fixed Height */
+.card-art {
+    height: 220px;  /* Fixed height - doubled */
+    min-height: 220px;
+    max-height: 220px;
+    background: linear-gradient(45deg, #8B7355 0%, #A0905C 50%, #8B7355 100%);
+    border: 4px solid #2c1810;  /* doubled */
+    margin: 8px;  /* doubled */
+    border-radius: 8px;  /* doubled */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;  /* doubled */
+}
+
+/* Type Line - Fixed Height */
+.type-line {
+    background: linear-gradient(90deg, #2c1810 0%, #4a3526 50%, #2c1810 100%);
+    padding: 5px 12px;  /* doubled */
+    margin: 5px 8px;  /* doubled */
+    border-radius: 4px;  /* doubled */
+    border: 2px solid #1a0f08;  /* doubled */
+    height: 25px; /* Fixed height for consistency */
+    min-height: 25px;
+    max-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between type and stats */
+}
+
+.card-stats {
+    color: #f4f1e8;
+    font-size: 22px;  /* doubled */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);  /* doubled */
+}
+
+.card-type {
+    color: #f4f1e8;
+    font-size: 18px;  /* doubled */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);  /* doubled */
+}
+
+.power-toughness-inline {
+    color: #f4f1e8;
+    font-size: 22px;  /* doubled */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);  /* doubled */
+}
+
+/* Text Box - Fixed Height */
+.text-box {
+    background: #f4f1e8;
+    border: 4px solid #2c1810;  /* doubled */
+    margin: 4px 8px 16px 8px;  /* Reduced bottom margin since no more separate power/toughness box */
+    padding: 12px;  /* doubled */
+    border-radius: 8px;  /* doubled */
+    height: 225px; /* Fixed height for consistency */
+    min-height: 225px;
+    max-height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between descriptions and quotes */
+    overflow: hidden; /* Hide overflow if text is too long */
+    /* Removed shadow for printing */
+}
+
+.description-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Space between description lines */
+}
+
+.quotes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* No gap between quotes */
+    margin-top: auto; /* Push quotes to bottom */
+}
+
+.description {
+    font-size: 22px;  /* doubled */
+    line-height: 1.2;
+    color: #2c1810;
+    margin: 0; /* Remove margin since we're using gap */
+    font-weight: 500;
+}
+
+.description:last-of-type {
+    font-style: italic;
+    color: #4a3526;
+}
+
+.quote {
+    font-size: 16px;  /* doubled */
+    font-style: italic;
+    color: #6b5b47;
+    margin: 0; /* Remove margin since we're using the container */
+    text-align: center;
+    line-height: 1.1;
+    padding: 3px 0; /* Small padding for readability */
+}
+
+.quote:first-of-type {
+    border-top: 2px solid #d4c4a8;  /* doubled */
+    padding-top: 6px;  /* doubled */
+}
+
+/* Power/Toughness - Hide the separate box */
+.power-toughness {
+    display: none; /* Hidden since stats are now in type line */
+}
+
+/* Color-specific styling */
+.card[data-deck="RED"] {
+    background: linear-gradient(135deg, #ffeee6 0%, #f4d4c7 100%);
+}
+
+.card[data-deck="RED"] .card-header {
+    background: linear-gradient(90deg, #8B1A1A 0%, #CD5C5C 50%, #8B1A1A 100%);
+}
+
+.card[data-deck="GREEN"] {
+    background: linear-gradient(135deg, #f0f8e8 0%, #e1f0d4 100%);
+}
+
+.card[data-deck="GREEN"] .card-header {
+    background: linear-gradient(90deg, #228B22 0%, #32CD32 50%, #228B22 100%);
+}
+
+.card[data-deck="BLUE"] {
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4e8f0 100%);
+}
+
+.card[data-deck="BLUE"] .card-header {
+    background: linear-gradient(90deg, #1E90FF 0%, #4169E1 50%, #1E90FF 100%);
+}
+
+.card[data-deck="WHITE"] {
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+}
+
+.card[data-deck="WHITE"] .card-header {
+    background: linear-gradient(90deg, #F5F5DC 0%, #FFFACD 50%, #F5F5DC 100%);
+    color: #2c1810;
+}
+
+.card[data-deck="WHITE"] .card-name {
+    color: #2c1810;
+    text-shadow: 2px 2px 2px rgba(255,255,255,0.8);  /* doubled */
+}
+
+.card[data-deck="WHITE"] .card-type,
+.card[data-deck="WHITE"] .card-stats,
+.card[data-deck="WHITE"] .power-toughness-inline {
+    color: #F5F5DC;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);  /* doubled */
+}
+
+.card[data-deck="BLACK"] {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.card[data-deck="BLACK"] .card-header {
+    background: linear-gradient(90deg, #2F2F2F 0%, #4A4A4A 50%, #2F2F2F 100%);
+}
+
+/* Mana symbol colors */
+.mana li.red { background: #FF4444; color: white; }
+.mana li.green { background: #44AA44; color: white; }
+.mana li.blue { background: #4444FF; color: white; }
+.mana li.white { background: #FFFFCC; color: #2c1810; }
+.mana li.black { background: #333333; color: white; }
+.mana li.colorless { background: #CCCCCC; color: #2c1810; }
+
+.card.spell .power-toughness-inline {
+    display: none; /* Hide stats for spells */
+}
+
+.card.land .power-toughness-inline {
+    display: none; /* Hide stats for lands */
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        display: none; /* Hide title when printing */
+    }
+    
+    #cards {
+        width: 100%;
+        max-width: 2270px;
+    }
+}

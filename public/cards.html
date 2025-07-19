@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Cards</title>
+    <script src="cards.js"></script>
+    <link rel="stylesheet" href="cards.css">
+</head>
+<body>
+    <h1>Magic: The Gathering Cards</h1>
+    <div id="dynamic-cards">
+        <!-- Cards created dynamically from JSON -->
+    </div>
+    <div id="cards">
+        <!-- Card template - will be populated by JavaScript -->
+        <div class="card" data-deck="RED">
+            <!-- Card Header -->
+            <div class="card-header">
+                <h2 class="card-name">Dragon</h2>
+                <ul class="mana">
+                    <li class="red">4</li>
+                    <li class="colorless">2</li>
+                </ul>
+            </div>
+            
+            <!-- Card Art -->
+            <div class="card-art">
+                <img src="https://via.placeholder.com/150x140/CD5C5C/FFFFFF?text=Dragon" alt="A mighty red dragon breathing fire with spread wings">
+            </div>
+            
+            <!-- Type Line -->
+            <div class="type-line">
+                <span class="card-type">Epic Creature — Dragon</span>
+                <span class="power-toughness-inline">6/6</span>
+            </div>
+            
+            <!-- Text Box -->
+            <div class="text-box">
+                <div class="description-section">
+                    <p class="description">Epic. Flying, haste</p>
+                    <p class="description">Épico. Volar, prisa</p>
+                </div>
+                <div class="quotes-section">
+                    <p class="quote">"Courage is not the absence of fear, but facing it."</p>
+                    <p class="quote">"El valor no es la ausencia de miedo, sino enfrentarlo."</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sample White Card -->
+        <div class="card" data-deck="WHITE">
+            <div class="card-header">
+                <h2 class="card-name">Angel</h2>
+                <ul class="mana">
+                    <li class="white">3</li>
+                    <li class="white">W</li>
+                    <li class="colorless">2</li>
+                </ul>
+            </div>
+            
+            <div class="card-art">
+                <img src="https://via.placeholder.com/150x140/FFFACD/2c1810?text=Angel" alt="A radiant angel with white wings and flowing robes">
+            </div>
+            
+            <div class="type-line">
+                <span class="card-type">Epic Creature — Angel</span>
+                <span class="power-toughness-inline">4/4</span>
+            </div>
+            
+            <div class="text-box">
+                <div class="description-section">
+                    <p class="description">Epic. Flying, vigilance, lifelink</p>
+                    <p class="description">Épico. Volar, vigilancia, vínculo vital</p>
+                </div>
+                <div class="quotes-section">
+                    <p class="quote">"Hope is the thing with feathers."</p>
+                    <p class="quote">"La esperanza es la cosa con plumas."</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sample Blue Card -->
+        <div class="card" data-deck="BLUE">
+            <div class="card-header">
+                <h2 class="card-name">Leviathan</h2>
+                <ul class="mana">
+                    <li class="blue">3</li>
+                    <li class="colorless">3</li>
+                </ul>
+            </div>
+            
+            <div class="card-art">
+                <img src="https://via.placeholder.com/150x140/4169E1/FFFFFF?text=Leviathan" alt="A massive sea monster emerging from deep ocean waters">
+            </div>
+            
+            <div class="type-line">
+                <span class="card-type">Epic Creature — Leviathan</span>
+                <span class="power-toughness-inline">6/6</span>
+            </div>
+            
+            <div class="text-box">
+                <div class="description-section">
+                    <p class="description">Epic. Cannot be blocked except by creatures with power 4 or greater</p>
+                    <p class="description">Épico. No puede ser bloqueado excepto por criaturas con poder 4 o mayor</p>
+                </div>
+                <div class="quotes-section">
+                    <p class="quote">"In the depths lurk the greatest mysteries."</p>
+                    <p class="quote">"En las profundidades acechan los mayores misterios."</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sample Green Card -->
+        <div class="card" data-deck="GREEN">
+            <div class="card-header">
+                <h2 class="card-name">Gaia</h2>
+                <ul class="mana">
+                    <li class="green">6</li>
+                    <li class="green">G</li>
+                    <li class="colorless">4</li>
+                </ul>
+            </div>
+            
+            <div class="card-art">
+                <img src="https://via.placeholder.com/150x140/32CD32/FFFFFF?text=Gaia" alt="Mother Earth as a massive figure made of plants and earth">
+            </div>
+            
+            <div class="type-line">
+                <span class="card-type">Titan Creature — Elemental</span>
+                <span class="power-toughness-inline">8/12</span>
+            </div>
+            
+            <div class="text-box">
+                <div class="description-section">
+                    <p class="description">Titan. All creatures get +1/+1 for each forest you control</p>
+                    <p class="description">Titán. Todas las criaturas obtienen +1/+1 por cada bosque que controles</p>
+                </div>
+                <div class="quotes-section">
+                    <p class="quote">"The earth is not inherited from ancestors, but borrowed from children."</p>
+                    <p class="quote">"La tierra no se hereda de los ancestros, sino que se toma prestada de los hijos."</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sample Black Card -->
+        <div class="card" data-deck="BLACK">
+            <div class="card-header">
+                <h2 class="card-name">Demon</h2>
+                <ul class="mana">
+                    <li class="black">3</li>
+                    <li class="black">B</li>
+                    <li class="colorless">2</li>
+                </ul>
+            </div>
+            
+            <div class="card-art">
+                <img src="https://via.placeholder.com/150x140/4A4A4A/FFFFFF?text=Demon" alt="A dark winged demon with glowing red eyes">
+            </div>
+            
+            <div class="type-line">
+                <span class="card-type">Epic Creature — Demon</span>
+                <span class="power-toughness-inline">5/5</span>
+            </div>
+            
+            <div class="text-box">
+                <div class="description-section">
+                    <p class="description">Epic. Flying. When Demon enters, each player sacrifices a creature</p>
+                    <p class="description">Épico. Volar. Cuando Demonio entre, cada jugador sacrifica una criatura</p>
+                </div>
+                <div class="quotes-section">
+                    <p class="quote">"Temptation is the test of character."</p>
+                    <p class="quote">"La tentación es la prueba del carácter."</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sample Spell Card -->
+        <div class="card spell" data-deck="RED">
+            <div class="card-header">
+                <h2 class="card-name">Erupt</h2>
+                <ul class="mana">
+                    <li class="red">3</li>
+                    <li class="red">R</li>
+                    <li class="colorless">2</li>
+                </ul>
+            </div>
+            
+            <div class="card-art">
+                <img src="https://via.placeholder.com/150x140/CD5C5C/FFFFFF?text=Erupt" alt="A volcanic eruption destroying everything in its path">
+            </div>
+            
+            <div class="type-line">
+                <span class="card-type">Sorcery</span>
+                <!-- No power/toughness for spells -->
+            </div>
+            
+            <div class="text-box">
+                <div class="description-section">
+                    <p class="description">Destroy all creatures on the battlefield</p>
+                    <p class="description">Destruye todas las criaturas en el campo de batalla</p>
+                </div>
+                <div class="quotes-section">
+                    <p class="quote">"Sometimes we must destroy to create anew."</p>
+                    <p class="quote">"A veces debemos destruir para crear de nuevo."</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sample Land Card -->
+        <div class="card land" data-deck="RED">
+            <div class="card-header">
+                <h2 class="card-name">Mountain</h2>
+                <ul class="mana">
+                    <!-- Lands have no mana cost -->
+                </ul>
+            </div>
+            
+            <div class="card-art">
+                <img src="https://via.placeholder.com/150x140/CD5C5C/FFFFFF?text=Mountain" alt="A volcanic mountain with red molten lava flowing down its sides">
+            </div>
+            
+            <div class="type-line">
+                <span class="card-type">Basic Land — Mountain</span>
+                <!-- No power/toughness for lands -->
+            </div>
+            
+            <div class="text-box">
+                <div class="description-section">
+                    <p class="description">Tap: Add one red mana</p>
+                    <p class="description">Girar: Añade un maná rojo</p>
+                </div>
+                <div class="quotes-section">
+                    <p class="quote">"Mountains are the beginning and the end of all natural scenery."</p>
+                    <p class="quote">"Las montañas son el principio y el fin de todo paisaje natural."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Function to parse mana cost string into individual symbols
+        function parseManaSymbols(manaString) {
+            if (!manaString || manaString === "0") return [];
+            
+            const symbols = [];
+            const parts = manaString.split(',');
+            
+            for (const part of parts) {
+                const trimmed = part.trim();
+                if (trimmed.includes('R')) {
+                    const number = trimmed.replace('R', '');
+                    if (number) symbols.push({type: 'red', value: number});
+                } else if (trimmed.includes('G')) {
+                    const number = trimmed.replace('G', '');
+                    if (number) symbols.push({type: 'green', value: number});
+                } else if (trimmed.includes('U')) {
+                    const number = trimmed.replace('U', '');
+                    if (number) symbols.push({type: 'blue', value: number});
+                } else if (trimmed.includes('W')) {
+                    const number = trimmed.replace('W', '');
+                    if (number) symbols.push({type: 'white', value: number});
+                } else if (trimmed.includes('B')) {
+                    const number = trimmed.replace('B', '');
+                    if (number) symbols.push({type: 'black', value: number});
+                } else if (trimmed.includes('A')) {
+                    const number = trimmed.replace('A', '');
+                    if (number) symbols.push({type: 'colorless', value: number});
+                } else if (trimmed) {
+                    symbols.push({type: 'colorless', value: trimmed});
+                }
+            }
+            
+            return symbols;
+        }
+        
+        // Load sample cards from DOM as templates
+        const rawSampleCards = document.querySelectorAll('#cards .card');
+        const sampleCards = {};
+        for (const rawSampleCard of rawSampleCards) {
+            const cardType = rawSampleCard.classList[1] ?? "creature";
+            sampleCards[cardType.toLowerCase()] = rawSampleCard.cloneNode(true);
+        }
+        
+        // Create cards dynamically from JSON
+        for (const card of cards) {
+            for (let i = 0; i < card.quantity; i++) {
+                let template = '';
+                if (card.stats === "Land") {
+                    template = sampleCards.land;
+                } else if (card.stats === "Spell") {
+                    template = sampleCards.spell;
+                } else {
+                    template = sampleCards.creature || rawSampleCards[0]; // Default to first card
+                }
+                
+                const newCard = template.cloneNode(true);
+                
+                // Set deck color
+                newCard.setAttribute('data-deck', card.deck);
+                
+                // Set card name
+                newCard.querySelector('.card-name').textContent = card.name;
+                
+                // Set mana cost
+                const manaContainer = newCard.querySelector('.mana');
+                manaContainer.innerHTML = ''; // Clear existing
+                const manaSymbols = parseManaSymbols(card.mana);
+                for (const symbol of manaSymbols) {
+                    const li = document.createElement('li');
+                    li.className = symbol.type;
+                    li.textContent = symbol.value;
+                    manaContainer.appendChild(li);
+                }
+                
+                newCard.querySelector('.card-type').textContent = card.type;
+                
+                // Set power/toughness for creatures
+                const powerToughness = newCard.querySelector('.power-toughness-inline');
+                if (powerToughness) {
+                    if (card.stats !== "Land" && card.stats !== "Spell") {
+                        powerToughness.textContent = card.stats;
+                        powerToughness.style.display = '';
+                    } else {
+                        powerToughness.style.display = 'none';
+                    }
+                }                
+                // Set descriptions (both English and Spanish)
+                const descriptions = newCard.querySelectorAll('.description');
+                if (descriptions.length >= 2) {
+                    descriptions[0].textContent = card.description;
+                    descriptions[1].textContent = card.descripcion;
+                }
+                
+                // Set quotes (both English and Spanish)
+                const quotes = newCard.querySelectorAll('.quote');
+                if (quotes.length >= 2) {
+                    quotes[0].textContent = `"${card.quote}"`;
+                    quotes[1].textContent = `"${card.cita}"`;
+                }
+                
+                // Set placeholder image with card name
+                const img = newCard.querySelector('.card-art img');
+                if (img) {
+                    const colors = {
+                        'RED': 'CD5C5C/FFFFFF',
+                        'GREEN': '32CD32/FFFFFF', 
+                        'BLUE': '4169E1/FFFFFF',
+                        'WHITE': 'FFFACD/2c1810',
+                        'BLACK': '4A4A4A/FFFFFF'
+                    };
+                    const colorCode = colors[card.deck] || 'CCCCCC/000000';
+                    img.src = `images/${card.name.toLowerCase().replace(/ /g, '_')}.png`;
+                    img.alt = card.image_description;
+                }
+                
+                // Insert new card into dynamic-cards
+                document.getElementById('dynamic-cards').appendChild(newCard);
+            }
+        }
+    </script>
+</body>
+</html>
